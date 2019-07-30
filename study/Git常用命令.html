@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Git常用命令 | Hello Xiao</title>
+    <meta name="description" content="书写精彩的程序人生">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    
+    <link rel="preload" href="/assets/css/0.styles.ecd2737c.css" as="style"><link rel="preload" href="/assets/js/app.05a1ff35.js" as="script"><link rel="preload" href="/assets/js/2.98c21cbe.js" as="script"><link rel="preload" href="/assets/js/14.3bd91f40.js" as="script"><link rel="prefetch" href="/assets/js/10.c3b5883b.js"><link rel="prefetch" href="/assets/js/11.5f84d844.js"><link rel="prefetch" href="/assets/js/12.5b2ebd08.js"><link rel="prefetch" href="/assets/js/13.9cde1f56.js"><link rel="prefetch" href="/assets/js/15.ba81ff29.js"><link rel="prefetch" href="/assets/js/16.db6c4230.js"><link rel="prefetch" href="/assets/js/17.87e14c23.js"><link rel="prefetch" href="/assets/js/18.081b3bce.js"><link rel="prefetch" href="/assets/js/19.e0af8f91.js"><link rel="prefetch" href="/assets/js/20.56c64be5.js"><link rel="prefetch" href="/assets/js/21.fe239b6b.js"><link rel="prefetch" href="/assets/js/22.7ce42616.js"><link rel="prefetch" href="/assets/js/23.519b4ed8.js"><link rel="prefetch" href="/assets/js/24.45b0061a.js"><link rel="prefetch" href="/assets/js/3.2bcc7c2e.js"><link rel="prefetch" href="/assets/js/4.f489cca2.js"><link rel="prefetch" href="/assets/js/5.017d910a.js"><link rel="prefetch" href="/assets/js/6.1d77d986.js"><link rel="prefetch" href="/assets/js/7.906ea416.js"><link rel="prefetch" href="/assets/js/8.0edba1ba.js"><link rel="prefetch" href="/assets/js/9.e2bad20b.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ecd2737c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Hello Xiao</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><a href="/study/" class="nav-link router-link-active">前端之路</a></div><div class="nav-item"><a href="/about/" class="nav-link">关于我</a></div><div class="nav-item"><a href="https://blog.csdn.net/wjx666666" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CSDN
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://xiao.algerfan.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  个人博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><a href="/study/" class="nav-link router-link-active">前端之路</a></div><div class="nav-item"><a href="/about/" class="nav-link">关于我</a></div><div class="nav-item"><a href="https://blog.csdn.net/wjx666666" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CSDN
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://xiao.algerfan.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  个人博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>前端日常</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/study/css图形.html" class="sidebar-link">CSS图形</a></li><li><a href="/study/document.html" class="sidebar-link">验证码交互</a></li><li><a href="/study/VSCode.html" class="sidebar-link">VSCode使用教程</a></li><li><a href="/study/Git常用命令.html" class="active sidebar-link">Git常用命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/study/Git常用命令.html#git常用命令" class="sidebar-link">Git常用命令</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>算法训练</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>总结反思</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="git常用命令"><a href="#git常用命令" aria-hidden="true" class="header-anchor">#</a> Git常用命令</h2> <h3 id="创建版本库"><a href="#创建版本库" aria-hidden="true" class="header-anchor">#</a> 创建版本库</h3> <div class="language-shell line-numbers-mode"><pre class="language-text"><code>#把这个目录变成Git可以管理的仓库
+git init
+#把文件添加到仓库
+git add readme.txt
+#把文件提交到仓库
+git commit -m &quot;wrote a readme file&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="时光穿梭机"><a href="#时光穿梭机" aria-hidden="true" class="header-anchor">#</a> 时光穿梭机</h3> <h4 id="版本回退"><a href="#版本回退" aria-hidden="true" class="header-anchor">#</a> 版本回退</h4> <div class="language-shell line-numbers-mode"><pre class="language-text"><code>#查看历史记录
+git log
+#查询版本号
+git log --pretty=oneline
+#回退到上个版本，上上一个版本就是HEAD^^
+git reset --hard HEAD^
+#回退到指定版本号的版本
+git reset --hard 1094a
+#查询你的每一次命令，并且可以看到版本号
+git reflog
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h4 id="撤销修改"><a href="#撤销修改" aria-hidden="true" class="header-anchor">#</a> 撤销修改</h4> <div class="language-shell line-numbers-mode"><pre class="language-text"><code>#撤销修改
+git checkout -- readme.txt
+#撤销已经add到暂存区的文件，再使用checkout即可撤销修改
+git reset HEAD readme.txt
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h4 id="删除文件"><a href="#删除文件" aria-hidden="true" class="header-anchor">#</a> 删除文件</h4> <div class="language-shell line-numbers-mode"><pre class="language-text"><code>#删除一个文件
+git rm test.txt
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="远程仓库"><a href="#远程仓库" aria-hidden="true" class="header-anchor">#</a> 远程仓库</h3> <h4 id="添加远程库"><a href="#添加远程库" aria-hidden="true" class="header-anchor">#</a> 添加远程库</h4> <div class="language-shell line-numbers-mode"><pre class="language-text"><code>#已有的本地仓库与远程仓库关联
+git remote add origin git@github.com:账户名/仓库名.git
+#将本地库的所有内容推送到远程库
+#由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。
+git push -u origin master
+#之后就可以直接通过以下命令推送
+git push origin master
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h4 id="克隆仓库"><a href="#克隆仓库" aria-hidden="true" class="header-anchor">#</a> 克隆仓库</h4> <div class="language-shell line-numbers-mode"><pre class="language-text"><code>#克隆一个仓库
+git clone 仓库地址
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="分支管理"><a href="#分支管理" aria-hidden="true" class="header-anchor">#</a> 分支管理</h3> <h4 id="创建和合并分支"><a href="#创建和合并分支" aria-hidden="true" class="header-anchor">#</a> 创建和合并分支</h4> <p>下面要完成的是创建一个新的分支，在新的分支下完成提交，然后再将新的分支合并到master分支。</p> <div class="language-shell line-numbers-mode"><pre class="language-text"><code>#创建并切换一个dev分支
+git checkout -b dev
+#git checkout命令加上-b参数表示创建并切换，相当于以下两条命令：
+git branch dev
+git checkout dev
+#查看当前分支
+git branch
+#之后完成提交，切换回master分支，然后把dev分支的工作成果合并到master分支上
+git merge dev
+#删除分支
+git branch -d dev
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h4 id="解决冲突"><a href="#解决冲突" aria-hidden="true" class="header-anchor">#</a> 解决冲突</h4> <p>当两个分支都有提交内容时，合并就会冲突，修改冲突以后，再次提交</p> <div class="language-shell line-numbers-mode"><pre class="language-text"><code>#通过以下命令看到分支的合并情况
+git log --graph --pretty=oneline --abbrev-commit
+#以下命令可以看到分支合并图
+git log --graph
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h4 id="分支管理策略"><a href="#分支管理策略" aria-hidden="true" class="header-anchor">#</a> 分支管理策略</h4> <p>通常，合并分支时，如果可能，Git会用<code>Fast forward</code>模式，但这种模式下，删除分支后，会丢掉分支信息。</p> <p>如果要强制禁用<code>Fast forward</code>模式，Git就会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息。</p> <div class="language-shell line-numbers-mode"><pre class="language-text"><code>#合并分支时，加上--no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward合并就看不出来曾经做过合并。
+git merge --no-ff -m &quot;merge with no-ff&quot; dev
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h4 id="bug分支"><a href="#bug分支" aria-hidden="true" class="header-anchor">#</a> Bug分支</h4> <p>当你接到一个修复一个代号101的bug的任务时，很自然地，你想创建一个分支<code>issue-101</code>来修复它，但是，当前正在<code>dev</code>上进行的工作还没有提交，可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作。</p> <div class="language-shell line-numbers-mode"><pre class="language-text"><code>#将当前分支隐藏
+git stash
+#找到dev的工作现场
+git stash list
+#有两个办法：一是用git stash apply恢复，但是恢复后，stash内容并不删除，你需要用git stash drop来删除
+git stash apply
+git stash drop
+#另一种方式是用git stash pop，恢复的同时把stash内容也删了
+git stash pop
+#再用git stash list查看，就看不到任何stash内容了
+#你可以多次stash，恢复的时候，先用git stash list查看，然后恢复指定的stash，用命令：
+git stash apply stash@{0}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h4 id="feature分支"><a href="#feature分支" aria-hidden="true" class="header-anchor">#</a> Feature分支</h4> <p>每添加一个新功能，最好新建一个feature分支，在上面开发，完成后，合并，最后，删除该feature分支。</p> <p>创建分支，提交，返回主分支合并。当新功能不需要时，强制删除使用-D：</p> <div class="language-shell line-numbers-mode"><pre class="language-text"><code>#强制删除分支feature-vulcan
+git branch -D feature-vulcan
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h4 id="多人协作"><a href="#多人协作" aria-hidden="true" class="header-anchor">#</a> 多人协作</h4> <p>查看远程库的信息，会显示可以抓取和推送的<code>origin</code>的地址。如果没有推送权限，就看不到push的地址。</p> <div class="language-shell line-numbers-mode"><pre class="language-text"><code>#查看远程库的信息
+git remote
+#显示更详细的信息
+git remote -v
+#推送分支
+git push origin master
+#要推送其他分支，比如dev
+git push origin dev
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>并不是一定要把本地分支往远程推送，那么，哪些分支需要推送，哪些不需要呢？</p> <ul><li><p><code>master</code>分支是主分支，因此要时刻与远程同步；</p></li> <li><p><code>dev</code>分支是开发分支，团队所有成员都需要在上面工作，所以也需要与远程同步；</p></li> <li><p>bug分支只用于在本地修复bug，就没必要推到远程了，除非老板要看看你每周到底修复了几个bug；</p></li> <li><p>feature分支是否推到远程，取决于你是否和你的小伙伴合作在上面开发。</p></li></ul> <p>当dev分支冲突时，先用<code>git pull</code>把最新的提交从<code>origin/dev</code>抓下来，然后，在本地合并，解决冲突，再推送：</p> <div class="language-shell line-numbers-mode"><pre class="language-text"><code>git pull
+#git pull失败原因是没有指定本地dev分支与远程origin/dev分支的链接，根据提示，设置dev和origin/dev的链接
+git branch --set-upstream-to=origin/dev dev
+git pull
+#修改冲突后再次提交
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>多人协作的工作模式通常是这样：</p> <ol><li>首先，可以试图用<code>git push origin &lt;branch-name&gt;</code>推送自己的修改；</li> <li>如果推送失败，则因为远程分支比你的本地更新，需要先用<code>git pull</code>试图合并；</li> <li>如果合并有冲突，则解决冲突，并在本地提交；</li> <li>没有冲突或者解决掉冲突后，再用<code>git push origin &lt;branch-name&gt;</code>推送就能成功！</li></ol> <p>如果<code>git pull</code>提示<code>no tracking information</code>，则说明本地分支和远程分支的链接关系没有创建，用命令<code>git branch --set-upstream-to &lt;branch-name&gt; origin/&lt;branch-name&gt;</code>。</p> <h5 id="小结"><a href="#小结" aria-hidden="true" class="header-anchor">#</a> 小结</h5> <ul><li><p>查看远程库信息，使用<code>git remote -v</code>；</p></li> <li><p>本地新建的分支如果不推送到远程，对其他人就是不可见的；</p></li> <li><p>从本地推送分支，使用<code>git push origin branch-name</code>，如果推送失败，先用<code>git pull</code>抓取远程的新提交；</p></li> <li><p>在本地创建和远程分支对应的分支，使用<code>git checkout -b branch-name origin/branch-name</code>，本地和远程分支的名称最好一致；</p></li> <li><p>建立本地分支和远程分支的关联，使用<code>git branch --set-upstream branch-name origin/branch-name</code>；（<code>git branch --set-upstream-to=origin/branch-name branch-name</code>）</p></li> <li><p>从远程抓取分支，使用<code>git pull</code>，如果有冲突，要先处理冲突。</p></li></ul> <div class="language-shell line-numbers-mode"><pre class="language-text"><code>#把分叉的提交历史“整理”成一条直线，看上去更直观。缺点是本地的分叉提交已经被修改过了。再使用git log --graph --pretty=oneline --abbrev-commit查看提交历史，会发现Git把我们本地的提交“挪动”了位置。
+git rebase
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="标签管理"><a href="#标签管理" aria-hidden="true" class="header-anchor">#</a> 标签管理</h3> <h4 id="创建标签"><a href="#创建标签" aria-hidden="true" class="header-anchor">#</a> 创建标签</h4> <div class="language-shell line-numbers-mode"><pre class="language-text"><code>#给当前分支打一个新标签
+git tag v1.0
+#查看所有标签
+git tag
+#给某个提交加上标签
+git tag v0.9 f52c633
+#标签不按顺序，查看标签信息
+git show v0.9
+#创建带有说明的标签
+git tag -a v0.1 -m &quot;version 0.1 released&quot; 1094adb
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h4 id="操作标签"><a href="#操作标签" aria-hidden="true" class="header-anchor">#</a> 操作标签</h4> <div class="language-shell line-numbers-mode"><pre class="language-text"><code>#如果标签打错了，也可以删除
+git tag -d v0.1
+#要推送某个标签到远程
+git push origin v1.0
+#一次性推送全部尚未推送到远程的本地标签
+git push origin --tags
+#标签已经推送到远程，要删除远程标签就麻烦一点，先从本地删除
+git tag -d v0.9
+#然后，从远程删除
+git push origin :refs/tags/v0.9
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h3 id="其他"><a href="#其他" aria-hidden="true" class="header-anchor">#</a> 其他</h3> <h4 id="参与一个开源项目"><a href="#参与一个开源项目" aria-hidden="true" class="header-anchor">#</a> 参与一个开源项目</h4> <p>如何参与一个开源项目呢？比如人气极高的bootstrap项目，这是一个非常强大的CSS框架，你可以访问它的项目主页<a href="https://github.com/twbs/bootstrap" target="_blank" rel="noopener noreferrer">https://github.com/twbs/bootstrap<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>，点“Fork”就在自己的账号下克隆了一个bootstrap仓库，然后，从自己的账号下clone。</p> <p>如果你想修复bootstrap的一个bug，或者新增一个功能，立刻就可以开始干活，干完后，往自己的仓库推送。</p> <p>如果你希望bootstrap的官方库能接受你的修改，你就可以在GitHub上发起一个pull request。当然，对方是否接受你的pull request就不一定了。</p> <h4 id="本地关联多个远程库"><a href="#本地关联多个远程库" aria-hidden="true" class="header-anchor">#</a> 本地关联多个远程库</h4> <div class="language-shell line-numbers-mode"><pre class="language-text"><code>#先删除已关联的名为origin的远程库
+git remote rm origin
+#然后，先关联GitHub的远程库
+git remote add github git@github.com:michaelliao/learngit.git
+#接着，再关联码云的远程库
+git remote add gitee git@gitee.com:liaoxuefeng/learngit.git
+#查看远程库信息
+git remote -v
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h4 id="自定义git"><a href="#自定义git" aria-hidden="true" class="header-anchor">#</a> 自定义Git</h4> <div class="language-shell line-numbers-mode"><pre class="language-text"><code>#让Git显示颜色，会让命令输出看起来更醒目
+git config --global color.ui true
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h5 id="忽略特殊文件"><a href="#忽略特殊文件" aria-hidden="true" class="header-anchor">#</a> 忽略特殊文件</h5> <p>不需要从头写<code>.gitignore</code>文件，GitHub已经为我们准备了各种配置文件，只需要组合一下就可以使用了。所有配置文件可以直接在线浏览：<a href="https://github.com/github/gitignore" target="_blank" rel="noopener noreferrer">https://github.com/github/gitignore<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <div class="language-shell line-numbers-mode"><pre class="language-text"><code>#有些时候，你想添加一个文件到Git，但发现添加不了，原因是这个文件被.gitignore忽略了
+git add App.class
+#如果你确实想添加该文件，可以用-f强制添加到Git
+git add -f App.class
+#或者你发现，可能是.gitignore写得有问题，需要找出来到底哪个规则写错了，可以用git check-ignore命令检查
+git check-ignore -v App.class
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h5 id="配置别名"><a href="#配置别名" aria-hidden="true" class="header-anchor">#</a> 配置别名</h5> <div class="language-shell line-numbers-mode"><pre class="language-text"><code>#只需要敲一行命令，告诉Git，以后st就表示status
+git config --global alias.st status
+#比如
+git config --global alias.co checkout
+git config --global alias.ci commit
+git config --global alias.br branch
+#还可以把几个单词用指定字母代替
+git config --global alias.unstage 'reset HEAD'
+#配置一个git last，让其显示最后一次提交信息，用git last就能显示最近一次的提交
+git config --global alias.last 'log -1'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h5 id="搭建git服务器"><a href="#搭建git服务器" aria-hidden="true" class="header-anchor">#</a> 搭建Git服务器</h5> <p>推荐用Ubuntu或Debian，这样，通过几条简单的<code>apt</code>命令就可以完成安装。</p> <div class="language-shell line-numbers-mode"><pre class="language-text"><code>#第一步，安装git：
+sudo apt-get install git
+
+#第二步，创建一个git用户，用来运行git服务：
+sudo adduser git
+
+#第三步，创建证书登录：
+#收集所有需要登录的用户的公钥，就是他们自己的id_rsa.pub文件，把所有公钥导入到/home/git/.ssh/authorized_keys文件里，一行一个。
+
+#第四步，初始化Git仓库：
+#先选定一个目录作为Git仓库，假定是/srv/sample.git，在/srv目录下输入命令：
+sudo git init --bare sample.git
+#Git就会创建一个裸仓库，裸仓库没有工作区，因为服务器上的Git仓库纯粹是为了共享，所以不让用户直接登录到服务器上去改工作区，并且服务器上的Git仓库通常都以.git结尾。然后，把owner改为git：
+sudo chown -R git:git sample.git
+
+#第五步，禁用shell登录：
+#出于安全考虑，第二步创建的git用户不允许登录shell，这可以通过编辑/etc/passwd文件完成。找到类似下面的一行：
+git:x:1001:1001:,,,:/home/git:/bin/bash
+#改为：
+git:x:1001:1001:,,,:/home/git:/usr/bin/git-shell
+#这样，git用户可以正常通过ssh使用git，但无法登录shell，因为我们为git用户指定的git-shell每次一登录就自动退出。
+
+#第六步，克隆远程仓库：
+#现在，可以通过git clone命令克隆远程仓库了，在各自的电脑上运行：
+git clone git@server:/srv/sample.git
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/study/VSCode.html" class="prev">
+          VSCode使用教程
+        </a></span> <span class="next"><a href="/study/32种01串.html">
+          32种01串
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.05a1ff35.js" defer></script><script src="/assets/js/2.98c21cbe.js" defer></script><script src="/assets/js/14.3bd91f40.js" defer></script>
+  </body>
+</html>
